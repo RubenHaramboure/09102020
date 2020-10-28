@@ -49,3 +49,14 @@ La rama master es la primera rama que se crea por defecto, normalmente, el uso d
 
 Para ver los commits deberemos usar ***git log***, nos aparecerá un listado con todos los commits que hemos ido utilizando, también lo que se puede hacer es hacer un filtrado de x comandos que queramos ver, por ejemplo: si queremos ver los últimos cinco comandos tecleramos ***git log -5*** y asi sucesivamente.
 
+4. <span style= "color:#80FC00">**¿Cómo se puede deshacer el último commit en Git?**</span>
+
+Si queremos mantener los cambios realizados usaremos  ***git reset --mixed***,  y si simplemente lo que queremos es no cargarnoslo y solo moverlo deberemos hacer ***git reset --soft***, pero también está la opción de destruirlo por completo el commit usaremos ***git reset --hard***
+
+5. <span style= "color:#80FC00">**¿Cómo se cambia el mensaje de un commit?**</span>
+
+Para cambiar el mensaje de un commit hay un camino rápido y muy práctica sería introduciendo ***git commit --amend*** una vez utilziado esto se abrirá un editor el cual te dejará modificar el mensaje, también, se puede cambiar directamente usando ***git commit --amend -m ·mensaje·***
+
+6. <span style= "color:#80FC00">**¿Cómo ver qué archivos son diferentes entre dos ramas en Git?**</span>
+
+Para poder obtener dicha información deberemos de utilizar ***git diff branch1..branch2*** 
