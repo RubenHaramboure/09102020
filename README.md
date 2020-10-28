@@ -34,3 +34,18 @@ Una vez configurada nuestra maquina procederemos a iniciar y a urilizar GIT
 - <span style= "color:yellow">**GIT Rebase**</span>: Se utiliza para integrar cambios de una rama a otra
 - <span style= "color:yellow">**GIT mv**</span>: Sirve para renombrar archivos.
 - <span style= "color:yellow">**GIT Stash**</span>: Se usa para almacenar todo lo que estás trabajando en un stash y saltar rápidamente a otra parte del proyecto, sin temor alguno de perder ningún archivo
+
+Una vez habido visto los comandos más usados y más comunes de GIT, procederemos a indagar en las preguntas/dudas más habituales que suele haber. Analizaremos las diez preguntas más interesantes que he encontrado;
+
+1.  <span style= "color:#80FC00">**¿Cuál es la diferencia entre *git rebase* y *git merge*?**</span>
+
+Por un lado, ***Git rebase*** genera una serie de commits secuencialemnte de modo que puedan aplicarse directamente sobre la cabeza del nodo, es decir, cuando se hace un rebase en la rama que se está trabajando, se le está diciendo a git que haga como si se está cambiando de rama de una forma más limpia y posterior se podrá trabajar a partir de ahí. Estos cambios son más visuales a la hora de observar, se puede repetir este proceso siempre que haya cambios nuevos. Por otro lado, ***git merge*** une dos o más historiales de desarrollo, cuando se realiza un merge de una rama, juntas el historial de ambas, realizandolo una y otra vez se estarán creando una serie de historiales intercalados, esto último puede llegar a ser bastante lioso.
+
+2. <span style= "color:#80FC00">**¿Qué es una rama master en git?**</span>
+
+La rama master es la primera rama que se crea por defecto, normalmente, el uso de esta está destinado a ser la rama principal del proyecto, donde debería de situarse el proyecto final del mismo. En un poryecto se podrán generar diferentes ramas, que estas nuevas ramas se utilizaran para realizar los correspondientes cambios que queramos realizar en nuestro proyecto, pero, luego tenemos que acordarnos de fusionar las "nuevas ramas" en la master.
+
+3. <span style= "color:#80FC00">**¿Cómo saber sobre que commit estoy trabajando?**</span>
+
+Para ver los commits deberemos usar ***git log***, nos aparecerá un listado con todos los commits que hemos ido utilizando, también lo que se puede hacer es hacer un filtrado de x comandos que queramos ver, por ejemplo: si queremos ver los últimos cinco comandos tecleramos ***git log -5*** y asi sucesivamente.
+
