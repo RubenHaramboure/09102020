@@ -51,12 +51,33 @@ Para ver los commits deberemos usar ***git log***, nos aparecerá un listado con
 
 4. <span style= "color:#80FC00">**¿Cómo se puede deshacer el último commit en Git?**</span>
 
-Si queremos mantener los cambios realizados usaremos  ***git reset --mixed***,  y si simplemente lo que queremos es no cargarnoslo y solo moverlo deberemos hacer ***git reset --soft***, pero también está la opción de destruirlo por completo el commit usaremos ***git reset --hard***
+Si queremos mantener los cambios realizados usaremos git reset --mixed, y si simplemente lo que queremos es no cargarnoslo y solo moverlo deberemos hacer git reset --soft, pero también está la opción de destruirlo por completo el commit usaremos git reset --hard
 
 5. <span style= "color:#80FC00">**¿Cómo se cambia el mensaje de un commit?**</span>
 
-Para cambiar el mensaje de un commit hay un camino rápido y muy práctica sería introduciendo ***git commit --amend*** una vez utilziado esto se abrirá un editor el cual te dejará modificar el mensaje, también, se puede cambiar directamente usando ***git commit --amend -m ·mensaje·***
+Para cambiar el mensaje de un commit hay un camino rápido y muy práctica sería introduciendo git commit --amend una vez utilziado esto se abrirá un editor el cual te dejará modificar el mensaje, también, se puede cambiar directamente usando git commit --amend -m ·mensaje·
 
 6. <span style= "color:#80FC00">**¿Cómo ver qué archivos son diferentes entre dos ramas en Git?**</span>
 
-Para poder obtener dicha información deberemos de utilizar ***git diff branch1..branch2*** 
+Para poder obtener dicha información deberemos de utilizar git diff branch1..branch2
+
+7. <span style= "color:#80FC00">**¿Cuál es la diferencia entre commit y push en GIT?**</span>
+
+***Git Push*** es un comando que sube los cambios hechos en tu ambiente de trabajo a una rama de trabajo tuya y/o de tu equipo remota. Commit identifica los cambios hechos en dicho ambiente de trabajo. Si tu no haces un ***git push*** de tus cambios, estos jamas se veran reflejados en tu repositorio remoto. A nivel de trabajo ***git push*** trabaja a nivel de repositorio, es decir con tu repositorio remoto, mientras que ***git commit*** trabaja en el repositorio local. Cuando se realiza el comando ***git status*** y anteriormente se hizo el commit sin haber hecho ***git push*** se puede verificar los archivos que anteriormente se modificaron.
+
+8. <span style= "color:#80FC00">**¿Como deshacer un ***git add***?**</span>
+
+Una vez realizado un ***git add*** la forma de deshacerlo será mediante el uso de un ***git reset***, los archivos no cambiarán pero se deshará del comando utilizado para el commit. También, hay forma deshacer un único archivo, que para esto deberemos de usar el comando ***git reset HEAD -nombre del archivo-***
+
+9. <span style= "color:#80FC00">**¿Qué significa el comando ***git ignore***?**</span>
+
+En el proyecto que estamos trabajando si realizamos un ***git ignore*** lo estamos diciendo a git que ignore los archivos o carpetas, estos simplemente se ocltarán, continuarán en la máquina local. Por ejemplo; Si escribimos ***git ignore archivo22.txt*** éste, ignorará completamente el ***archivo22.txt*** pero seguirá en nuestra maquina aunque no aparezca.
+
+10. <span style= "color:#80FC00">**¿Qué diferencia hay entre ***git add . git add -A y git add -u***?**</span>
+
+Cuando se hace un ***git add .*** se están agregando todos los archivos en el area de preparación, en cambio con ***git add -u*** solo se están agregando los archivos rastreados actualmente, es decir, lo que se han modificado y a parte de esto verifica si se han llegado a eliminar ciertos archivos, y por ultimo ***git add -A*** realiza ambos pasos, es decir, organiza todo el directorio tal y como está. En resumen; ***git add -A*** es igual que ***git add . + git add -u***.
+
+
+Resumidamente estás podrían ser las preguntas más comúnes que puedan surgir duda a la hora de trabajar con comandos git, a parte de estas, podrán ir surgiendo con el paso del tiempo otras preguntas/dudas. Estas dudas podrán ser resueltas [en este enlace](https://es.stackoverflow.com/questions/tagged/git?tab=votes&page=1&pagesize=15), nos redirige a una página el cuál en ella trabajan y ayudan gente con unos grandes conocimientos en el mundo de la informática. 
+
+
